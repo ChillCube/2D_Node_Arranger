@@ -1,5 +1,5 @@
 # 2D_Node_Arranger API Reference
-Generated on: Mon Mar  9 12:49:17 AM CET 2026
+Generated on: Mon Mar  9 12:51:50 AM CET 2026
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
@@ -20,10 +20,3 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 | **alternative_node_list** | `` | `[]` | By default, this node arranges their children. With this you can use an alternative list of nodes to arrange instead of the children. |
 | **ignore_alternative_node_list** | `` | `false` | Ignores the alternative node list. |
 
-## Methods
-| Method | Returns | Description |
-| :--- | :--- | :--- |
-
-## Signals
-| Signal | Description |
-| :--- | :--- |
