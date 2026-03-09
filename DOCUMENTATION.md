@@ -1,7 +1,7 @@
 # 2D_Node_Arranger API Reference
-Generated on: Mon Mar  9 01:22:20 PM CET 2026
+Generated on: 2026-03-09
 
-A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
+This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 
 ---
 
