@@ -1,12 +1,12 @@
 # 2D_Node_Arranger API Reference
-Generated on: 2026-03-09
+Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
 ### 📦 Dependencies
-| Addon | Repository |
-| :--- | :--- |
-| Godot_SmoothMovement | [Link](https://github.com/ChillCube/Godot_SmoothMovement) |
+| Class | Addon | Repository |
+| :--- | :--- | :--- |
+| [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md#class-smoothmovement) | Godot_SmoothMovement | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
 
 ---
 
