@@ -8,12 +8,9 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 ### Automated
 * [SmoothMovement](https://github.com/ChillCube/Godot_SmoothMovement) (via Godot_SmoothMovement)
 
----
 
-## Class: Test
-
-just testing
-
+### Manual
+# Add non-Godot dependencies below
 ---
 
 ## Class: NodeArranger
