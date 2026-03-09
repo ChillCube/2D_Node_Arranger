@@ -7,7 +7,7 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 
 This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 
-### Properties
+### ⚙️ Inspector Variables (Exported)
 | Property | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | **continous_arranging** | `bool` | `true` | If not true the elements won't arrange automatically |
@@ -22,7 +22,7 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 | **alternative_node_list** | `Array[Node]` | `[]` | By default, this node arranges their children. With this you can use an alternative list of nodes to arrange instead of the children.  |
 | **ignore_alternative_node_list** | `bool` | `false` | Ignores the alternative node list.  |
 
-### Methods
+### 🛠️ Methods
 | Method | Arguments | Returns | Description |
 | :--- | :--- | :--- | :--- |
 | **arrange()** | - | `void` |  If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
