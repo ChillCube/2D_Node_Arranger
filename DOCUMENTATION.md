@@ -7,7 +7,6 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 
 | Source | Reference | Repository |
 | :--- | :--- | :--- |
-| Code | [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md) | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
 
 ---
 
