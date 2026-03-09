@@ -25,7 +25,7 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 ### Methods
 | Method | Arguments | Returns | Description |
 | :--- | :--- | :--- | :--- |
-| **arrange()** | <small>`-`</small> | `void` |  If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
+| **arrange()** | - | `void` |  If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
 
 ---
 
