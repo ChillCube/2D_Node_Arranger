@@ -2,7 +2,7 @@
 extends Node2D
 class_name NodeArranger
 
-@export var continous_arranging = true; ## If not true the elements won't arrange automatically
+@export var continous_arranging : bool = true; ## If not true the elements won't arrange automatically
 
 @export var max_vertical : int = 1 ## Sets the maximum for how many nodes can be arranged by this node vertically
 @export var max_horizontal : int = 10 ## Sets the maximum for how many nodes can be arranged by this node horizontally
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	if continous_arranging:
 		arrange()
 
-func arrange() -> void:
+func arrange() -> void: ## If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script.
 	var nodes_to_arrange : Array[Node]
 	if alternative_node_list.size() == 0 or ignore_alternative_node_list:
 		nodes_to_arrange  = get_children()
