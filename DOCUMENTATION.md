@@ -10,6 +10,7 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 ### ⚙️ Inspector Variables
 | Property | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
+| **continous_arranging** | `` | `true; ## If not true the elements won't arrange automatically` | This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables. |
 | **--- NODE LIST ---** | | | |
 
 ---
