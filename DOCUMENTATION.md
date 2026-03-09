@@ -4,9 +4,9 @@ Generated: 2026-03-09
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
 ### 📦 Dependencies
-| Class | Addon | Repository |
+| Source | Reference | Repository |
 | :--- | :--- | :--- |
-| [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md#class-smoothmovement) | Godot_SmoothMovement | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
+| Code | [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md#class-smoothmovement) | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
 
 ---
 
