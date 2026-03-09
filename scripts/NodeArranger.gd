@@ -55,9 +55,16 @@ func _arrange_nodes(nodes : Array[Node]) -> void:
 			_arrange_node(node, placement, 0)
 
 func _arrange_node(node : Node, global_pos, global_rot):
-	if node.has_node("SmoothMovement"):
-		node.get_node("SmoothMovement").global_target_position = global_pos
-		node.get_node("SmoothMovement").global_target_rotation = global_rot
+	var smooth_mover : Variant = has_smooth_mover(node);
+	if smooth_mover:
+		smooth_mover.global_target_position = global_pos
+		smooth_mover.global_target_rotation = global_rot
 	else:
 		node.global_position = global_pos
 		node.global_rotation = global_rot
+
+func has_smooth_mover(node : Node):
+	for child in node.get_children():
+		if child is SmoothMovement:
+			return child
+	return false

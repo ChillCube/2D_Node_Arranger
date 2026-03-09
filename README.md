@@ -30,5 +30,3 @@ Run this at the root of your directory to push changes to any addons you have:
 ```bash
 push-all-addons
 ```
-
-
