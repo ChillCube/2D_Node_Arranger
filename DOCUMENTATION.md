@@ -3,15 +3,7 @@ Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
-### 📦 Dependencies
-| Source | Reference | Repository |
-| :--- | :--- | :--- |
-| Code | [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md#class-smoothmovement) | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
-
----
-
 ## Class: NodeArranger
-**Inherits:** [`Node2D`](https://docs.godotengine.org/en/stable/classes/class_node2d.html)
 
 This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 
@@ -33,7 +25,7 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 ### Methods
 | Method | Returns | Description |
 | :--- | :--- | :--- |
-| **arrange()** | `void` |  If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
+| **arrange() -> void:** | `void` |  If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
 
 ---
 
