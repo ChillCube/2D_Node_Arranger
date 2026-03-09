@@ -3,6 +3,13 @@ Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
+### 📦 Dependencies
+
+| Source | Reference | Repository |
+| :--- | :--- | :--- |
+
+---
+
 ## Class: NodeArranger
 **Inherits:** [Node2D](https://docs.godotengine.org/en/stable/classes/class_node2d.html)
 
