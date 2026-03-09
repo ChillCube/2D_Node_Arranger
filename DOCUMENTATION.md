@@ -8,7 +8,7 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 ## Properties
 | Property | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| **continous_arranging** | `Variant` | `true` | If not true the elements won't arrange automatically |
+| **continous_arranging** | `` | `true` | If not true the elements won't arrange automatically |
 | **max_vertical** | `` | `1` | Sets the maximum for how many nodes can be arranged by this node vertically |
 | **max_horizontal** | `` | `10` | Sets the maximum for how many nodes can be arranged by this node horizontally |
 | **offset** | `` | `-` | Offsets the position of all nodes being arranged by this node |
@@ -19,4 +19,9 @@ This node will sort / arrange the child nodes in a certain way, that you can def
 | **ignore_node_exclusion** | `` | `false` | Ignores the excluded nodes and includes them. |
 | **alternative_node_list** | `` | `[]` | By default, this node arranges their children. With this you can use an alternative list of nodes to arrange instead of the children. |
 | **ignore_alternative_node_list** | `` | `false` | Ignores the alternative node list. |
+
+## Methods
+| Method | Returns | Description |
+| :--- | :--- | :--- |
+| **arrange()** | `void` | If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script. |
 
