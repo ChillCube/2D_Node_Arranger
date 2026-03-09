@@ -3,11 +3,11 @@ Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 | Source | Reference | Repository |
 | :--- | :--- | :--- |
-| Code | \140SmoothMovement\140 | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
+| Code | [`SmoothMovement`](https://github.com/ChillCube/Godot_SmoothMovement/blob/main/DOCUMENTATION.md) | [Repo](https://github.com/ChillCube/Godot_SmoothMovement) |
 
 ---
 
