@@ -1,4 +1,6 @@
-The following ChillCube addons are required:
+# --- Automated Dependencies (Managed by Script) ---
+https://github.com/ChillCube/Godot_SmoothMovement
 
-* [SmoothMovement](https://github.com/ChillCube/Godot_SmoothMovement) (via Godot_SmoothMovement)
 
+# --- Manual Dependencies (Do Not Delete) ---
+# Add non-Godot dependencies below
