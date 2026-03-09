@@ -3,12 +3,6 @@ Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
-### 🐧 Linux / MacOS
-To add this to your project, copy paste this command into terminal at the root of your project:
-```bash
-clone-gd-addon https://github.com/ChillCube/2d_node_arranger.git
-```
-
 ## Class: NodeArranger
 
 This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
