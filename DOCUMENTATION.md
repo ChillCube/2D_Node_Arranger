@@ -3,17 +3,8 @@ Generated: 2026-03-09
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
-## 🔗 Dependencies
-
-### Automated
-* [SmoothMovement](https://github.com/ChillCube/Godot_SmoothMovement) (via Godot_SmoothMovement)
-
-
-### Manual
-# Add non-Godot dependencies below
----
-
 ## Class: NodeArranger
+**Inherits:** [Node2D](https://docs.godotengine.org/en/stable/classes/class_node2d.html)
 
 This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 
