@@ -2,32 +2,40 @@
 extends Node2D
 class_name NodeArranger
 
-@export var continous_arranging : bool = true; ## If not true the elements won't arrange automatically
+@export var continous_arranging : bool = true ## If not true the elements won't arrange automatically
 
+@export_group("Grid Settings")
 @export var max_vertical : int = 1 ## Sets the maximum for how many nodes can be arranged by this node vertically
 @export var max_horizontal : int = 10 ## Sets the maximum for how many nodes can be arranged by this node horizontally
-@export var offset : Vector2; ## Offsets the position of all nodes being arranged by this node
-@export var centered : bool = true; ## (Attempts) to center the elements at the position of the arranger
+@export var offset : Vector2 ## Offsets the position of all nodes being arranged by this node
+@export var centered : bool = true ## (Attempts) to center the elements at the position of the arranger
 
-@export var distance_vertical : float = 100; ## Determines the vertical distance between each column
-@export var distance_horizontal : float = 100; ## Determines the horisontal distance between each row
+@export_group("Spacing")
+@export var distance_vertical : float = 100 ## Determines the vertical distance between each column
+@export var distance_horizontal : float = 100 ## Determines the horizontal distance between each row
+
+@export_group("Visual FX")
+## These variables are used by sub-classes like CardHand for "fanning" effects
+@export var curve_intensity : float = 0.0
+@export var rotation_intensity : float = 0.0
 
 @export_group("Node List")
 @export var nodes_to_exclude : Array[Node] ## Use if the nodes being sorted are not the child nodes (like sub-children)
-@export var ignore_node_exclusion : bool = false; ## Ignores the excluded nodes and includes them. 
-@export var alternative_node_list : Array[Node] = [] ## By default, this node arranges their children. With this you can use an alternative list of nodes to arrange instead of the children. 
-@export var ignore_alternative_node_list : bool = false; ## Ignores the alternative node list. 
+@export var ignore_node_exclusion : bool = false ## Ignores the excluded nodes and includes them. 
+@export var alternative_node_list : Array[Node] = [] ## By default, this node arranges their children.
+@export var ignore_alternative_node_list : bool = false ## Ignores the alternative node list. 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if continous_arranging:
 		arrange()
 
-func arrange() -> void: ## If "continous_arranging" is set to false, you can use this method to manually arrange the nodes inside your script.
+func arrange() -> void: 
 	var nodes_to_arrange : Array[Node]
 	if alternative_node_list.size() == 0 or ignore_alternative_node_list:
-		nodes_to_arrange  = get_children()
+		nodes_to_arrange = get_children()
 	else:
 		nodes_to_arrange = alternative_node_list
+		
 	if not ignore_node_exclusion:
 		for node in nodes_to_exclude:
 			if node in nodes_to_arrange:
@@ -35,36 +43,55 @@ func arrange() -> void: ## If "continous_arranging" is set to false, you can use
 	_arrange_nodes(nodes_to_arrange)
 
 func _arrange_nodes(nodes : Array[Node]) -> void:
-	var node_count_horizontal : int = 0;
-	var node_count_vertical : int = 0;
+	var node_count_horizontal : int = 0
+	var node_count_vertical : int = 0
 	var place_node : bool = true 
+	
 	for node in nodes:
 		if node_count_horizontal < max_horizontal:
-			node_count_horizontal += 1;
+			node_count_horizontal += 1
 		else:
-			node_count_horizontal = 1;
-			node_count_vertical += 1;
+			node_count_horizontal = 1
+			node_count_vertical += 1
 			if node_count_vertical >= max_vertical:
-				place_node = false;
+				place_node = false
+				
 		if place_node:
 			var placement : Vector2 
 			if centered:
-				placement = global_position + offset + Vector2(distance_horizontal * (node_count_horizontal - (max_horizontal/2)), distance_vertical * (node_count_vertical - (max_vertical/2)))
+				placement = global_position + offset + Vector2(
+					distance_horizontal * (node_count_horizontal - (max_horizontal / 2.0)), 
+					distance_vertical * (node_count_vertical - (max_vertical / 2.0))
+				)
 			else:
-				placement = global_position + offset + Vector2(distance_horizontal * node_count_horizontal, distance_vertical * node_count_vertical)
-			_arrange_node(node, placement, 0)
+				placement = global_position + offset + Vector2(
+					distance_horizontal * node_count_horizontal, 
+					distance_vertical * node_count_vertical
+				)
+			# Default rotation is 0 for the base arranger
+			_arrange_node(node, placement, 0.0)
 
-func _arrange_node(node : Node, global_pos, global_rot):
-	var smooth_mover : Variant = has_smooth_mover(node);
+func _arrange_node(node : Node, global_pos: Vector2, global_rot: float) -> void:
+	var smooth_mover : Variant = has_smooth_mover(node)
+	
 	if smooth_mover:
 		smooth_mover.global_target_position = global_pos
 		smooth_mover.global_target_rotation = global_rot
 	else:
-		node.global_position = global_pos
-		node.global_rotation = global_rot
+		if node is Node2D:
+			node.global_position = global_pos
+			node.global_rotation = global_rot
+		elif node is Control:
+			# UI elements use position relative to parent or global_position
+			node.global_position = global_pos
+			node.rotation = global_rot
 
 func has_smooth_mover(node : Node):
 	for child in node.get_children():
+		# This assumes you have a class_name SmoothMovement defined elsewhere
+		if child.get_script() and child.get_class() == "SmoothMovement":
+			return child
+		# Fallback if class_name is properly registered:
 		if child is SmoothMovement:
 			return child
-	return false
+	return null
