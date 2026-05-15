@@ -34,6 +34,7 @@ push-all-addons
 
 
 ## Used By
-1 other ChillCube addon(s) depend on this:
+2 other ChillCube addon(s) depend on this:
 
+- [Card Hand](https://github.com/ChillCube/Card_Hand)
 - [SteamLobbyList](https://github.com/ChillCube/SteamLobbyList)
