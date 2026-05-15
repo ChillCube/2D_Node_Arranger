@@ -353,4 +353,3 @@ func has_smooth_mover(node : Node):
 		if child is SmoothMovement:
 			return child
 	return null
-
