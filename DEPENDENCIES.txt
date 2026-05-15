@@ -2,3 +2,4 @@
 
 # --- Manual Dependencies  ---
 https://github.com/ChillCube/Godot_SmoothMovement.git
+# Updated: 2026-05-15
