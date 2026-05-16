@@ -1,3 +1,4 @@
+@icon("res://addons/2d_node_arranger/icon_list.png")
 ## This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 extends Node2D
 class_name NodeArranger

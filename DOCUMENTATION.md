@@ -1,5 +1,5 @@
 # 2D_Node_Arranger API Reference
-Generated: 2026-05-10
+Generated: 2026-05-16
 
 A node that you can use to arrange node in certain patterns. Useful for UI elements, cards for a card game, etc
 
@@ -8,7 +8,6 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 		#
 **Inherits:** [Node2D](https://docs.godotengine.org/en/stable/classes/class_node2d.html)
 
-This node will sort / arrange the child nodes in a certain way, that you can define yourself with the variables.
 
 ### ⚙️ Inspector Variables (Exported)
 | Property | Type | Default | Description |
