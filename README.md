@@ -32,7 +32,9 @@ push-all-addons
 
 
 ## Used By
-2 other ChillCube addon(s) depend on this:
+4 other ChillCube addon(s) depend on this:
 
 - [Card Hand](https://github.com/ChillCube/Card_Hand)
+- [ItemFrameGrid2D](https://github.com/ChillCube/ItemFrameGrid2D)
+- [SmoothUI](https://github.com/ChillCube/SmoothUI)
 - [SteamLobbyList](https://github.com/ChillCube/SteamLobbyList)
