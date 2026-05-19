@@ -188,8 +188,8 @@ func _arrange_nodes_fixed(nodes : Array[Node]) -> void:
 			var placement : Vector2
 			if centered:
 				placement = global_position + offset + Vector2(
-					distance_horizontal * (node_count_horizontal - (max_horizontal / 2.0)),
-					distance_vertical * (node_count_vertical - (max_vertical / 2.0))
+					distance_horizontal * (node_count_horizontal - (max_horizontal + 1) / 2.0),
+					distance_vertical * (node_count_vertical - (max_vertical - 1) / 2.0)
 				)
 			else:
 				placement = global_position + offset + Vector2(
