@@ -4,38 +4,35 @@ A node that you can use to arrange node in certain patterns. Useful for UI eleme
 
 ## Installation
 
-Make sure to download the ChillCube Developer tools to use this addon: https://github.com/ChillCube/ChillCube-Developer-Tools.git
+Make sure to download the ChillCube Developer tools: https://github.com/ChillCube/ChillCube-Developer-Tools.git
 
-### Linux
-To add this to your project, copy paste these commands into terminal at the root of your project:
+### Using the Godot Plugin
+Enable the **ChillCube Tools** plugin, then paste the repo URL into the Clone tab.
+
+### Linux / CLI
 ```bash
 clone-gd-addon https://github.com/ChillCube/2d_node_arranger.git
 ```
 
 ## Documentation
-You can find the documentation at: https://github.com/ChillCube/2D_Node_Arranger/blob/main/DOCUMENTATION.md
+https://github.com/ChillCube/2D_Node_Arranger/blob/main/DOCUMENTATION.md
 
 ## Deinstallation
-### Linux
-Run this in the root of your godot project:
+Use the CC Tools panel in Godot, or run:
 ```bash
 remove-gd-addon 2D_Node_Arranger
 ```
 
 ## For Developers
-### Push Changes
-Run this at the root of your directory to push changes to any addons you have:
 ```bash
 push-all-addons
 ```
-
-
 
 ## Used By
 5 other ChillCube addon(s) depend on this:
 
 - [Card Hand](https://github.com/ChillCube/Card_Hand)
-- [GridArranger](https://github.com/ChillCube/GridArranger)
-- [NumberDisplay](https://github.com/ChillCube/NumberDisplay)
 - [SmoothUI](https://github.com/ChillCube/SmoothUI)
+- [GridArranger](https://github.com/ChillCube/GridArranger)
 - [SteamLobbyList](https://github.com/ChillCube/SteamLobbyList)
+- [NumberDisplay](https://github.com/ChillCube/NumberDisplay)
