@@ -27,8 +27,3 @@ remove-gd-addon 2D_Node_Arranger
 ```bash
 push-all-addons
 ```
-
-## Used By
-1 other ChillCube addon(s) depend on this:
-
-- [SmoothUI](https://github.com/ChillCube/SmoothUI)
