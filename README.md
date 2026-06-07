@@ -27,3 +27,9 @@ remove-gd-addon 2D_Node_Arranger
 ```bash
 push-all-addons
 ```
+
+## Used By
+2 other ChillCube addon(s) depend on this:
+
+- [Card Hand](https://github.com/ChillCube/Card_Hand)
+- [SteamLobbyList](https://github.com/ChillCube/SteamLobbyList)
