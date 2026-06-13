@@ -56,7 +56,8 @@ func _ready() -> void:
 	original_position = global_position
 	_update_anchor_position()
 	if not Engine.is_editor_hint() and animate_entry_exit:
-		current_off_screen_pixels = get_viewport_rect().size * _off_screen_position
+		var _cam := get_viewport().get_camera_2d()
+		current_off_screen_pixels = _off_screen_position * get_viewport_rect().size * (Vector2.ONE / _cam.zoom if _cam else Vector2.ONE)
 		global_position = original_position + current_off_screen_pixels
 		mover = SmoothMovement.init(self)
 		mover.speed = entry_exit_speed
@@ -70,8 +71,15 @@ func _update_anchor_position() -> void:
 	var viewport_size := get_viewport_rect().size
 	if viewport_size == Vector2.ZERO:
 		return
-	original_position = viewport_size * anchor_point + viewport_size * _position
-	current_off_screen_pixels = viewport_size * _off_screen_position
+	var camera := get_viewport().get_camera_2d() if not Engine.is_editor_hint() else null
+	if camera:
+		var world_per_pixel := Vector2.ONE / camera.zoom
+		var cam_center := camera.get_screen_center_position()
+		original_position = cam_center + (anchor_point + _position - Vector2(0.5, 0.5)) * viewport_size * world_per_pixel
+		current_off_screen_pixels = _off_screen_position * viewport_size * world_per_pixel
+	else:
+		original_position = viewport_size * anchor_point + viewport_size * _position
+		current_off_screen_pixels = viewport_size * _off_screen_position
 	if not animate_entry_exit:
 		global_position = original_position
 
@@ -86,7 +94,8 @@ func _process(_delta: float) -> void:
 	if use_relative_positioning:
 		_update_anchor_position()
 	if animate_entry_exit and mover:
-		current_off_screen_pixels = get_viewport_rect().size * _off_screen_position
+		var _cam := get_viewport().get_camera_2d() if not Engine.is_editor_hint() else null
+		current_off_screen_pixels = _off_screen_position * get_viewport_rect().size * (Vector2.ONE / _cam.zoom if _cam else Vector2.ONE)
 		var target := original_position + current_off_screen_pixels if _is_hidden else original_position
 		if Engine.is_editor_hint():
 			global_position = target
